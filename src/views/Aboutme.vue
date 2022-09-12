@@ -21,7 +21,7 @@ background color="#A7C7E7"
         min-height="300"
       
         
-        src="/public/ann.jpg"
+        src="ann.jpg"
       ></v-img>
 
     <v-card-text>
