@@ -23,6 +23,14 @@
    
            <v-dialog v-model="dialog" max-width="600px">
                <v-card>
+                <v-img
+        contain
+        max-height="200"
+        min-height="400"
+      
+        
+        src="/me.png"
+      ></v-img>
                  
                    <v-card-title>
                        <h2>About Me</h2>
