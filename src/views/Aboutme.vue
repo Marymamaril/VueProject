@@ -6,22 +6,11 @@ class="mx-auto"
 max-width="500"
 background color="#A7C7E7"
 >
-
-
-
-    
-    
-
-
-
-
 <v-img
         contain
         max-height="150"
         min-height="300"
-      
-        
-        src="/public/ann.jpg"
+        src="ann.jpg"
       ></v-img>
 
     <v-card-text>

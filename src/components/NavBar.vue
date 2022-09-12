@@ -17,7 +17,7 @@
   <v-toolbar>
   <v-app-bar-nav-icon @click='toggleDrawer'></v-app-bar-nav-icon>
   <v-toolbar-title >
-    <span class="font-weight-hard">Simple application</span>
+    <span class="font-weight-hard">Midterm Application</span>
   </v-toolbar-title>
   <v-spacer></v-spacer>
 
