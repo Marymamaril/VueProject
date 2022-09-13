@@ -1,66 +1,58 @@
 <template>
-<br/>
-<v-card
-class="mx-auto"
-max-width="600"
-background color="#A7C7E7">
+  <h1>Quiz App</h1>
+  <quiz @quiz-completed="handleQuizCompleted" :key="quizKey" />
+  <custom-modal
+    v-show="showModal"
+    header="Congratulations!"
+    subheader="You've completed your Quiz!"
+    :score="score"
+    @reload="updateQuiz"
+    @close="showModal = false"
+  />
 
+</template>
 
+<script>
+import CustomModal from "../components/CustomModal.vue";
+import Quiz from "../components/Quiz.vue";
 
-<v-card-title>Questions and Answer</v-card-title>
+export default {
+components: { Quiz, CustomModal },
 
+data() {
+  return {
+    quizKey: 0,
+    showModal: false,
+    score: {
+      allQuestions: 0,
+      answeredQuestions: 0,
+      correctlyAnsweredQuestions: 0,
+    },
+  };
+},
+methods: {
+  handleQuizCompleted(score) {
+    this.score = score;
+    this.showModal = true;
+  },
+  updateQuiz() {
+    this.showModal = false;
+    this.quizKey++;
+  },
+},
+};
+</script>
 
- 
-        <v-btn class="mx-2" color="primary" @click="getQuestions">Show</v-btn><br/>
-        
-        <v-list-item
-                v-for="question in questions"
-                :key="question.id"
-                >
-                <v-list-item>{{ question.question }}</v-list-item>
-                <v-list-item>
-                    {{question.correct_answer}}
-                </v-list-item>
-        </v-list-item>
-</v-card>
-        </template>
-        
-        <script setup>
-            import { ref } from 'vue';
-            import axios from 'axios'
-        
-            const questions=ref([])
-        
-            async function getQuestions () {
-                axios.get('https://opentdb.com/api.php?amount=10&category=23&difficulty=easy&type=multiple').then( response => {
-                    questions.value=(response.data.results)
-                })
-                
-            }
-        
-        </script>
-        
-        <style>
-    
-            .card {
-                border: 1px solid white;
-                transition: 0.3s;
-                width: 80%;
-               
-            }
-            
-            .card:hover {
-                box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-            }
-            
-            .container {
-                padding: 2px 16px;
-            }
-            
-            
-            
-            
-            </style>
-
-
-
+<style>
+* {
+box-sizing: border-box;
+}
+#app {
+font-family: Avenir, Helvetica, Arial, sans-serif;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+text-align: center;
+color: #2c3e50;
+line-height: 1.6;
+}
+</style>
