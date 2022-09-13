@@ -37,8 +37,8 @@ const router = createRouter({
       component: Aboutme
       },
       {
-        path: '/AxiosDemo',
-        name: 'AxiosDemo',
+        path: '/quizapp',
+        name: 'quizapp',
         component: AxiosDemo
         },
         {
