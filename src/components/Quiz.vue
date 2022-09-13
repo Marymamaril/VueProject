@@ -1,5 +1,7 @@
 <template>
     <div class="container">
+       <center> <h1>Mythology Quiz Game</h1></center>
+       <br>
       <div class="correctAnswers">
         You have
         <strong>{{ correctAnswers }} correct {{ pluralizeAnswer }}!</strong>
@@ -112,7 +114,7 @@
         this.loading = true;
         //fetching questions from api
         let response = await fetch(
-          "https://opentdb.com/api.php?amount=20&category=21&type=multiple"
+          "https://opentdb.com/api.php?amount=20&category=20&type=multiple"
         );
         let index = 0; //To identify single answer
         let data = await response.json();
@@ -214,10 +216,10 @@
     padding: 1rem;
     margin: 0.5rem;
     width: 40%;
-    background-color: rgba(100, 100, 100, 0.3);
+    background-color: rgb(62, 83, 218);
     border: none;
     border-radius: 0.4rem;
-    box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.2);
+  
   }
   button:hover:enabled {
     transform: scale(1.02);
