@@ -17,7 +17,7 @@
   <v-toolbar>
   <v-app-bar-nav-icon @click='toggleDrawer'></v-app-bar-nav-icon>
   <v-toolbar-title >
-    <span class="font-weight-hard">Midterm Project</span>
+    <span class="font-weight-hard">Midterm Application</span>
   </v-toolbar-title>
   <v-spacer></v-spacer>
 
@@ -76,7 +76,7 @@
           { title: 'String App', icon: 'mdi-help-box', path: '/stringApp'},
           { title: 'Vuetify', icon: 'mdi-vuetify', path: '/vuetify'},
           { title: 'Aboutme', icon: 'mdi-account-box', path: '/aboutme'},
-          { title: 'AxiosDemo', icon: 'mdi-account-box', path: '/axiosdemo'},
+          { title: 'Quiz App', icon: 'mdi-account-box', path: '/quizapp'},
           { title: 'About App', icon: 'mdi-account-box', path: '/aboutapp'},
         ])
 
