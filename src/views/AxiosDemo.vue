@@ -1,5 +1,5 @@
 <template>
-<div :style="{'background-image':'url(../public/myth.jpg)'}" class="image">
+<div :style="{'background-image':'url(myth.jpg)'}" class="image">
   
   <quiz @quiz-completed="handleQuizCompleted" :key="quizKey" />
   <custom-modal
