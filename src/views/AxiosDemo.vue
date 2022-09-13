@@ -1,5 +1,5 @@
 <template>
-
+<div :style="{'background-image':'url(../public/myth.jpg)'}" class="image">
   
   <quiz @quiz-completed="handleQuizCompleted" :key="quizKey" />
   <custom-modal
@@ -10,7 +10,9 @@
     @reload="updateQuiz"
     @close="showModal = false"
   />
-
+  <br>
+  <br> <br> <br>
+</div>
 </template>
 
 <script>
@@ -47,6 +49,12 @@ methods: {
 <style>
 * {
 box-sizing: border-box;
+}
+.image
+{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 </style>
