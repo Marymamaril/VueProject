@@ -1,5 +1,6 @@
 <template>
-  <h1>Quiz App</h1>
+<div :style="{'background-image':'url(myth.jpg)'}" class="image">
+  
   <quiz @quiz-completed="handleQuizCompleted" :key="quizKey" />
   <custom-modal
     v-show="showModal"
@@ -9,7 +10,9 @@
     @reload="updateQuiz"
     @close="showModal = false"
   />
-
+  <br>
+  <br> <br> <br>
+</div>
 </template>
 
 <script>
@@ -47,12 +50,11 @@ methods: {
 * {
 box-sizing: border-box;
 }
-#app {
-font-family: Avenir, Helvetica, Arial, sans-serif;
--webkit-font-smoothing: antialiased;
--moz-osx-font-smoothing: grayscale;
-text-align: center;
-color: #2c3e50;
-line-height: 1.6;
+.image
+{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
+
 </style>

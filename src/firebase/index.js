@@ -1,9 +1,3 @@
-import { createApp } from 'vue'
-import App from './App.vue'
-import router from './router'
-import vuetify from './plugins/vuetify'
-import { loadFonts } from './plugins/webfontloader'
-import "bootstrap/dist/css/bootstrap.min.css"
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 // TODO: Add SDKs for Firebase products that you want to use
@@ -24,9 +18,3 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig)
 const auth = getAuth(app)
 export { auth }
-loadFonts()
-
-createApp(App)
-  .use(router)
-  .use(vuetify)
-  .mount('#app')
